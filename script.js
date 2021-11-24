@@ -26,6 +26,8 @@ toggleMenu.addEventListener('click', function () {
 	if(navMenu.classList.contains('show')) {
 		nav.classList.add('active');
 	} else {
-		nav.classList.remove('active');
+		if(!window.scrollY > 20) {
+			nav.classList.remove('active');
+		}
 	}
 })
